@@ -156,30 +156,39 @@ const formCategories = [
       {
         nameAr: 'استمارة استيراد تصدير',
         nameEn: 'Import Export Form',
-        fileName: 'import-export-form.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/import-export-form.pdf',
       },
       {
         nameAr:
           'بيان بمدى وجود نشاط مترابط او مكمل لنشاط الشركة موضوع التسجيل ق12-1',
         nameEn: 'Statement of Related or Complementary Activities Q12-1',
-        fileName: 'statement-related-complementary-activities-q12-1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/statement-related-complementary-activities-q12-1.pdf',
       },
       {
         nameAr: 'بيان مفصل برقم الاعمال ق11-1',
         nameEn: 'Detailed Business Number Statement Q11-1',
         fileName:
-          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/commitment.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/detailed-business-number-statement-q11-1.pdf',
       },
-      { nameAr: 'تعهد', nameEn: 'Commitment', fileName: 'commitment.pdf' },
+      {
+        nameAr: 'تعهد',
+        nameEn: 'Commitment',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/commitment.pdf',
+      },
       {
         nameAr: 'طلب الغاء تسجيل في الضريبة على القيمة المضافة ق2-1',
         nameEn: 'VAT Registration Cancellation Request Q2-1',
-        fileName: 'vat-registration-cancellation-request-q2-1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/vat-registration-cancellation-request-q2-1.pdf',
       },
       {
         nameAr: 'طلب تسجيل في الضريبة على القيمة المضافة ق1-1',
         nameEn: 'VAT Registration Request Q1-1',
-        fileName: 'vat-registration-request-q1-1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/Value%20Added%20Tax%20Forms/vat-registration-request-q1-1.pdf',
       },
     ],
   },
