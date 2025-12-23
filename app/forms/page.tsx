@@ -383,7 +383,7 @@ export default function FormsPage() {
     );
   };
 
-  const handleDownload = (folderName: string, fileName: string) => {
+  const handleDownload = (fileName: string) => {
     const link = document.createElement('a');
     link.href = fileName;
     link.download = fileName;
@@ -393,7 +393,7 @@ export default function FormsPage() {
     document.body.removeChild(link);
   };
 
-  const handlePreview = (folderName: string, fileName: string) => {
+  const handlePreview = (fileName: string) => {
     window.open(fileName, '_blank');
   };
 
@@ -560,12 +560,7 @@ export default function FormsPage() {
                               </button>
                               {/* Download Button */}
                               <button
-                                onClick={() =>
-                                  handleDownload(
-                                    category.folderName,
-                                    form.fileName
-                                  )
-                                }
+                                onClick={() => handleDownload(form.fileName)}
                                 className="p-2 lg:p-3 text-white bg-gradient-to-r from-primary to-secondary hover:shadow-lg rounded-lg transition-all"
                                 title="Download"
                               >
