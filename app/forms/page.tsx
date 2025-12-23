@@ -382,41 +382,18 @@ export default function FormsPage() {
         : [...prev, folderName]
     );
   };
-
   const handleDownload = async (fileName: string) => {
     try {
       // Check if it's a full Vercel blob URL
       if (fileName.startsWith('https://')) {
         // Detect iOS devices specifically
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        const isMobile =
-          window.innerWidth <= 768 ||
-          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
 
         if (isIOS) {
           // For iOS: Direct navigation to force download
           window.location.href = fileName;
-        } else if (isMobile) {
-          // For other mobile devices: Use link with download attribute
-          const link = document.createElement('a');
-          link.href = fileName;
-
-          const urlPath = new URL(fileName).pathname;
-          const downloadName = urlPath.split('/').pop() || 'document.pdf';
-          link.download = decodeURIComponent(downloadName);
-
-          link.target = '_blank';
-          link.style.display = 'none';
-          document.body.appendChild(link);
-          link.click();
-
-          setTimeout(() => {
-            document.body.removeChild(link);
-          }, 100);
         } else {
-          // Desktop: Use blob method
+          // For all other devices (desktop and mobile): Use blob method
           const response = await fetch(fileName);
           if (!response.ok) throw new Error('Download failed');
 
@@ -429,6 +406,7 @@ export default function FormsPage() {
           const downloadName = urlPath.split('/').pop() || 'document.pdf';
           link.download = decodeURIComponent(downloadName);
 
+          // Ensure it doesn't open in new tab
           link.style.display = 'none';
           document.body.appendChild(link);
           link.click();
@@ -445,7 +423,7 @@ export default function FormsPage() {
       }
     } catch (error) {
       console.error('Download failed:', error);
-      window.open(fileName, '_blank');
+      alert('Download failed. Please try again or contact support.');
     }
   };
 
