@@ -385,36 +385,70 @@ export default function FormsPage() {
 
   const handleDownload = async (fileName: string) => {
     try {
-      // Fetch the file from Vercel blob storage
-      const response = await fetch(fileName);
-      if (!response.ok) throw new Error('Download failed');
+      // Check if it's a full Vercel blob URL
+      if (fileName.startsWith('https://')) {
+        // For mobile devices, use direct navigation which works better
+        const isMobile =
+          window.innerWidth <= 768 ||
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          );
 
-      // Get the blob data
-      const blob = await response.blob();
+        if (isMobile) {
+          // Mobile: Create a temporary link with download attribute
+          const link = document.createElement('a');
+          link.href = fileName;
 
-      // Create download link
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
+          // Extract filename from URL for download attribute
+          const urlPath = new URL(fileName).pathname;
+          const downloadName = urlPath.split('/').pop() || 'document.pdf';
+          link.download = decodeURIComponent(downloadName);
 
-      // Extract filename from URL path
-      const urlPath = new URL(fileName).pathname;
-      const downloadName = urlPath.split('/').pop() || 'document.pdf';
-      link.download = decodeURIComponent(downloadName);
+          // Force download behavior
+          link.target = '_self';
+          link.style.display = 'none';
+          document.body.appendChild(link);
 
-      // Force download
-      link.style.display = 'none';
-      document.body.appendChild(link);
-      link.click();
+          // Trigger click
+          link.click();
 
-      // Cleanup
-      setTimeout(() => {
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-      }, 100);
+          // Cleanup
+          setTimeout(() => {
+            document.body.removeChild(link);
+          }, 100);
+        } else {
+          // Desktop: Use blob method
+          const response = await fetch(fileName);
+          if (!response.ok) throw new Error('Download failed');
+
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+
+          const urlPath = new URL(fileName).pathname;
+          const downloadName = urlPath.split('/').pop() || 'document.pdf';
+          link.download = decodeURIComponent(downloadName);
+
+          link.style.display = 'none';
+          document.body.appendChild(link);
+          link.click();
+
+          setTimeout(() => {
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+          }, 100);
+        }
+      } else {
+        // For forms without full URLs, show a helpful message
+        alert(
+          'This form is being updated with the latest version. Please try again shortly or contact us for assistance.'
+        );
+      }
     } catch (error) {
       console.error('Download failed:', error);
-      alert('Download failed. Please try again.');
+      // Fallback: open in new tab
+      window.open(fileName, '_blank');
     }
   };
 
