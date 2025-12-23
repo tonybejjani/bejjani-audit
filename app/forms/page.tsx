@@ -397,22 +397,24 @@ export default function FormsPage() {
       const link = document.createElement('a');
       link.href = url;
 
-      // Extract filename from URL for download attribute
-      const urlParts = fileName.split('/');
-      const downloadName = urlParts[urlParts.length - 1] || 'document.pdf';
+      // Extract filename from URL path
+      const urlPath = new URL(fileName).pathname;
+      const downloadName = urlPath.split('/').pop() || 'document.pdf';
       link.download = decodeURIComponent(downloadName);
 
-      // Trigger download
+      // Force download
+      link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
 
       // Cleanup
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
+      setTimeout(() => {
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }, 100);
     } catch (error) {
       console.error('Download failed:', error);
-      // Fallback: open in new tab
-      window.open(fileName, '_blank');
+      alert('Download failed. Please try again.');
     }
   };
 
@@ -552,12 +554,7 @@ export default function FormsPage() {
                             <div className="flex gap-1 ml-2 flex-shrink-0">
                               {/* Preview Button */}
                               <button
-                                onClick={() =>
-                                  handlePreview(
-                                    category.folderName,
-                                    form.fileName
-                                  )
-                                }
+                                onClick={() => handlePreview(form.fileName)}
                                 className="p-2 lg:p-3 text-blue-700 bg-blue-100 hover:bg-blue-200 rounded-lg transition-colors"
                                 title="Preview"
                               >
