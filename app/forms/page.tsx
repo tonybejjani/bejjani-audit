@@ -167,7 +167,8 @@ const formCategories = [
       {
         nameAr: 'بيان مفصل برقم الاعمال ق11-1',
         nameEn: 'Detailed Business Number Statement Q11-1',
-        fileName: 'detailed-business-number-statement-q11-1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/commitment.pdf',
       },
       { nameAr: 'تعهد', nameEn: 'Commitment', fileName: 'commitment.pdf' },
       {
@@ -375,7 +376,7 @@ export default function FormsPage() {
 
   const handleDownload = (folderName: string, fileName: string) => {
     const link = document.createElement('a');
-    link.href = `/forms/${folderName}/${fileName}`;
+    link.href = fileName;
     link.download = fileName;
     link.target = '_blank';
     document.body.appendChild(link);
@@ -384,7 +385,7 @@ export default function FormsPage() {
   };
 
   const handlePreview = (folderName: string, fileName: string) => {
-    window.open(`/forms/${folderName}/${fileName}`, '_blank');
+    window.open(fileName, '_blank');
   };
 
   return (
