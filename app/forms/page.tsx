@@ -383,14 +383,37 @@ export default function FormsPage() {
     );
   };
 
-  const handleDownload = (fileName: string) => {
-    const link = document.createElement('a');
-    link.href = fileName;
-    link.download = fileName;
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async (fileName: string) => {
+    try {
+      // Fetch the file from Vercel blob storage
+      const response = await fetch(fileName);
+      if (!response.ok) throw new Error('Download failed');
+
+      // Get the blob data
+      const blob = await response.blob();
+
+      // Create download link
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+
+      // Extract filename from URL for download attribute
+      const urlParts = fileName.split('/');
+      const downloadName = urlParts[urlParts.length - 1] || 'document.pdf';
+      link.download = decodeURIComponent(downloadName);
+
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+
+      // Cleanup
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open(fileName, '_blank');
+    }
   };
 
   const handlePreview = (fileName: string) => {
