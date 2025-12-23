@@ -1,0 +1,144 @@
+/**
+ * ************ HERO SECTION *************
+ *
+ * @format
+ */
+
+.hero {
+  height: 100vh;
+  position: relative;
+  background-image: url('img/Overlay.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero__content {
+  max-width: 80rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero__text {
+  margin-bottom: 4rem;
+}
+
+.hero__title {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.hero__subtitle {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hero__btn--primary {
+  background: var(--white);
+  color: var(--blue-dark);
+  border-color: var(--white);
+}
+
+.hero__btn--primary:hover {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.hero__btn--secondary {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.hero__btn-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: currentColor;
+}
+
+/* Hero section mobile styles */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 3.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.6rem;
+  }
+
+  .hero__btn {
+    padding: 1.3rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero__overlay {
+    padding: 1.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero__btn {
+    padding: 1.2rem 1.8rem;
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,125 @@
+/** @format */
+
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* Custom Breakpoints */
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1536px;
+  --breakpoint-2xl: 2000px;
+
+  /* Modern Corporate Blue Theme */
+  --color-primary: #1e40af; /* Deeper Navy Blue */
+  --color-primary-dark: #1e3a8a; /* Even Deeper Navy */
+  --color-secondary: #1d4ed8; /* Royal Blue */
+  --color-accent: #2563eb; /* Bright Blue */
+  --color-accent-light: #3b82f6; /* Sky Blue */
+
+  /* Blue Scale */
+  --color-blue-50: #dbeafe;
+  --color-blue-100: #bfdbfe;
+  --color-blue-200: #93c5fd;
+  --color-blue-300: #60a5fa;
+  --color-blue-400: #3b82f6;
+  --color-blue-500: #2563eb;
+  --color-blue-600: #1d4ed8;
+  --color-blue-700: #1e40af;
+  --color-blue-800: #1e3a8a;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #0f172a;
+
+  /* Neutral/Gray Scale */
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Semantic Colors */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+
+  /* Gradients */
+  --color-gradient-from: #1e3a8a;
+  --color-gradient-to: #2563eb;
+
+  /* Font Families */
+  --font-family-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
+
+  /* Animations */
+
+  /* Animations */
+  --animate-menu-slide-in: menuSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    forwards;
+  --animate-menu-slide-out: menuSlideOut 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    forwards;
+
+  --animate-fade-out: fadeOut 0.5s ease-out forwards;
+}
+
+/* Mobile Menu Animations */
+@keyframes menuSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menuSlideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Custom animation classes */
+.animate-menu-slide-in {
+  animation: var(--animate-menu-slide-in);
+}
+
+.animate-menu-slide-out {
+  animation: var(--animate-menu-slide-out);
+}
+
+.animate-fade-out {
+  animation: var(--animate-fade-out);
+}
