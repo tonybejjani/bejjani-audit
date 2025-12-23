@@ -75,3 +75,8 @@ coverage/
 *.avi
 *.mkv
 *.webm
+
+# PDF files and forms
+*.pdf
+public/forms/
+public/IMG_*.pdf
