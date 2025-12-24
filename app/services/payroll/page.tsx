@@ -87,7 +87,7 @@ export default function page() {
               </svg>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Professional Payroll Services
+              Payroll Services
             </h1>
             <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
               Comprehensive payroll management and employee compensation
