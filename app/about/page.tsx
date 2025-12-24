@@ -252,11 +252,11 @@ export default function AboutPage() {
                 Roy Bejjani
               </h3>
               <p className="text-lg text-primary font-semibold mb-4">
-                Managing Partner & Certified Auditor
+                Founder & Managing Partner
               </p>
               <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
                 With extensive experience in accounting, auditing, and business
-                advisory services, Roy leads our firm with a commitment to
+                advisory services, Roy leads the firm with a commitment to
                 excellence and client satisfaction. His expertise spans multiple
                 industries and regulatory frameworks, ensuring comprehensive
                 solutions for our diverse clientele.
