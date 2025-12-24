@@ -56,7 +56,7 @@ export default function Footer() {
                     href="tel:76751480"
                     className="text-white font-semibold hover:text-blue-300 transition-colors"
                   >
-                    76 751 480
+                    +(961) 76 751 480
                   </a>
                 </div>
               </div>

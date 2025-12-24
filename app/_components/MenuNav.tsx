@@ -29,7 +29,7 @@ export default function MenuNav() {
                 </li>
                 <li>
                   <Link
-                    href="/#about"
+                    href="/about"
                     className="text-base font-semibold text-gray-600 hover:text-primary transition-all duration-300 relative group py-2"
                   >
                     About us
