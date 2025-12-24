@@ -83,7 +83,7 @@ export default function AboutPage() {
               </svg>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              About Roy Bejjani Audit Firm
+              Bejjani Audit Firm
             </h1>
             <p className="text-md sm:text-xl text-white/90 leading-relaxed">
               Dedicated to excellence in accounting, auditing, and business

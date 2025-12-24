@@ -10,9 +10,11 @@ export default function MenuNav() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/#" className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
-                Bejjani Audit
-              </div>
+              <img
+                src="/logo.svg"
+                alt="Bejjani Audit"
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Navigation */}

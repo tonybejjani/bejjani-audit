@@ -26,7 +26,7 @@ export default function MenuMobile() {
       <div className="fixed top-0 left-0 right-0 z-40 backdrop-blur-2xl bg-white/80 backdrop-saturate-150 shadow-lg border-b border-white/20">
         <div className="px-4 py-3 flex items-center justify-between">
           <Link href="/#" className="text-xl font-bold text-primary">
-            Bejjani Audit
+            <img src="/logo.svg" alt="Bejjani Audit" className="h-8 w-auto" />
           </Link>
           <button
             onClick={toggleMenu}
