@@ -447,8 +447,16 @@ export default function FormsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-16 relative text-white bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/documents.jpg')",
+        }}
+      >
+        {/* Blue overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/70"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
               <svg

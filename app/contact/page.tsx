@@ -74,7 +74,7 @@ export default function ContactPage() {
               </svg>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Contact Us
+              We're here to help
             </h1>
             <p className="text-md sm:text-xl text-white/90 leading-relaxed">
               Ready to take your business to the next level? Get in touch with
