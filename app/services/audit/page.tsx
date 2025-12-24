@@ -70,8 +70,16 @@ export default function page() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-12 relative text-white bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/audit-assurance.jpg')",
+        }}
+      >
+        {/* Blue overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/70"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
               <svg
@@ -89,7 +97,7 @@ export default function page() {
               </svg>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Professional Audit & Assurance Services
+              Audit & Assurance Services
             </h1>
             <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
               Independent audit services ensuring compliance and financial
