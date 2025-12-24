@@ -11,7 +11,7 @@ export default function MenuNav() {
             {/* Logo */}
             <Link href="/#" className="flex items-center">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Bejjani Audit"
                 className="h-12 w-auto"
               />
