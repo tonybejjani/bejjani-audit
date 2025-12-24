@@ -138,7 +138,7 @@ export default function MenuMobile() {
                 </Link>
 
                 <Link
-                  href="/#about"
+                  href="/about"
                   onClick={toggleMenu}
                   className="flex items-center px-4 py-4 text-white/90 hover:text-white hover:bg-white/10 rounded-2xl transition-all duration-300 group backdrop-blur-sm border border-transparent hover:border-white/20"
                 >
