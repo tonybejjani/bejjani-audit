@@ -4,9 +4,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-// Force dynamic rendering - page will be regenerated on every request
-export const dynamic = 'force-dynamic';
-
 // Form categories with Arabic names first, English second
 const formCategories = [
   {
