@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 // Force dynamic rendering - page will be regenerated on every request
 export const dynamic = 'force-dynamic';
-export const revalidate = 0; // Disable caching completely
 
 // Form categories with Arabic names first, English second
 const formCategories = [
