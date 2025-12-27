@@ -83,7 +83,7 @@ export default function Footer() {
                     href="mailto:info@roybejjani.com"
                     className="text-white font-semibold hover:text-blue-300 transition-colors"
                   >
-                    info@roybejjani.com
+                    info@bejjaniaudit.com
                   </a>
                 </div>
               </div>
