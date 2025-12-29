@@ -1,44 +1,120 @@
 /** @format */
+'use client';
 
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { useState } from 'react';
 
-export const metadata: Metadata = {
-  title: 'Contact Us | Roy Bejjani Audit Firm',
-  description:
-    'Get in touch with Roy Bejjani Audit Firm for professional accounting, auditing, and business advisory services. Contact us for a free consultation.',
-  keywords: [
-    'contact',
-    'consultation',
-    'accounting services',
-    'audit firm',
-    'business advisory',
-    'Lebanon accounting',
-    'Roy Bejjani',
-  ],
-  openGraph: {
-    title: 'Contact Us | Roy Bejjani Audit Firm',
-    description:
-      'Get in touch with Roy Bejjani Audit Firm for professional accounting, auditing, and business advisory services. Contact us for a free consultation.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact Us | Roy Bejjani Audit Firm',
-    description:
-      'Get in touch with Roy Bejjani Audit Firm for professional accounting, auditing, and business advisory services. Contact us for a free consultation.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: '/contact',
-  },
-};
+// Note: Since this is now a client component, metadata should be handled in layout.tsx or with next/head
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+}
+
+interface FormStatus {
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
+}
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+
+  const [status, setStatus] = useState<FormStatus>({
+    type: 'idle',
+    message: '',
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Basic client-side validation
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.message
+    ) {
+      setStatus({
+        type: 'error',
+        message: 'Please fill in all required fields.',
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setStatus({
+        type: 'error',
+        message: 'Please enter a valid email address.',
+      });
+      return;
+    }
+
+    setStatus({ type: 'loading', message: 'Sending message...' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message:
+            'Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.',
+        });
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: '',
+        });
+      } else {
+        setStatus({
+          type: 'error',
+          message: data.error || 'Failed to send message. Please try again.',
+        });
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.',
+      });
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb Navigation */}
@@ -245,7 +321,22 @@ export default function ContactPage() {
                 Send us a Message
               </h2>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Status Message */}
+                {status.type !== 'idle' && (
+                  <div
+                    className={`p-4 rounded-lg ${
+                      status.type === 'success'
+                        ? 'bg-green-50 text-green-700 border border-green-200'
+                        : status.type === 'error'
+                        ? 'bg-red-50 text-red-700 border border-red-200'
+                        : 'bg-blue-50 text-blue-700 border border-blue-200'
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+                )}
+
                 {/* Name Fields */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -259,6 +350,8 @@ export default function ContactPage() {
                       type="text"
                       id="firstName"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                       placeholder="Your first name"
@@ -275,6 +368,8 @@ export default function ContactPage() {
                       type="text"
                       id="lastName"
                       name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                       placeholder="Your last name"
@@ -294,6 +389,8 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                     placeholder="your.email@example.com"
@@ -312,6 +409,8 @@ export default function ContactPage() {
                     type="tel"
                     id="phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                     placeholder="Your phone number"
                   />
@@ -328,6 +427,8 @@ export default function ContactPage() {
                   <select
                     id="service"
                     name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Select a service</option>
@@ -353,6 +454,8 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-vertical"
                     placeholder="Please describe how we can help you..."
@@ -362,9 +465,10 @@ export default function ContactPage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  disabled={status.type === 'loading'}
+                  className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Send Message
+                  {status.type === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
 
                 <p className="text-sm text-gray-600 text-center">
