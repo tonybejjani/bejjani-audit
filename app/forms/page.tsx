@@ -31,105 +31,121 @@ const formCategories = [
           'التصريح الشخصي لضريبة الرواتب والأجور للمستخدم الذي يعمل في عدة مؤسسات - ر8',
         nameEn: 'Personal Salary Tax Declaration - R8',
         fileName:
-          'personal-declaration-salary-wage-tax-multiple-institutions-r8.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/personal-declaration-salary-wage-tax-multiple-institutions-r8.pdf',
       },
       {
         nameAr: 'إعلام بالتفرغ عن حصص في شركات محدودة المسؤولية - د6-ش',
         nameEn: 'LLC Shares Disposal Notice - D6-S',
-        fileName: 'notice-disposal-shares-limited-liability-companies-d6-s.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/notice-disposal-shares-limited-liability-companies-d6-s.pdf',
       },
       {
         nameAr: 'تعريف شريك او مساهم او صاحب حق اقتصادي - م2',
         nameEn: 'Partner/Shareholder Identification - M2',
         fileName:
-          'identification-partner-shareholder-beneficial-right-holder-m2.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/identification-partner-shareholder-beneficial-right-holder-m2.pdf',
       },
       {
         nameAr: 'اعتراض على التكليف بالضريبة والأخطاء المادية - ك13',
         nameEn: 'Tax Assessment Objection - K13',
-        fileName: 'objection-tax-assessment-material-errors-k13.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/objection-tax-assessment-material-errors-k13.pdf',
       },
       {
         nameAr: 'تصريح تعديل معلومات مؤسسات فردية ومهن - م5',
         nameEn: 'Individual Business Info Modification - M5',
         fileName:
-          'declaration-modifying-information-individual-establishments-professions-m5.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/declaration-modifying-information-individual-establishments-professions-m5.pdf',
       },
       {
         nameAr: 'طلب بدل عن ضائع شهادة تسجيل - د2',
         nameEn: 'Lost Registration Certificate Replacement - D2',
-        fileName: 'request-replacement-lost-registration-certificate-d2.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/request-replacement-lost-registration-certificate-d2.pdf',
       },
       {
         nameAr: 'تصريح للاستفادة من تنزيل سكن المالك - ك6',
         nameEn: 'Owner Housing Deduction Declaration - K6',
-        fileName: 'declaration-benefit-owner-housing-deduction-k6.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/declaration-benefit-owner-housing-deduction-k6.pdf',
       },
       {
         nameAr: 'مباشرة عمل مؤسسات فردية ومهن - م10',
         nameEn: 'Individual Business Commencement - M10',
         fileName:
-          'commencement-work-individual-establishments-professions-m10.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/commencement-work-individual-establishments-professions-m10.pdf',
       },
       {
         nameAr: 'طلب إعلام بالرقم الشخصي - د1',
         nameEn: 'Personal Number Notification - D1',
-        fileName: 'request-personal-number-notification-d1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/request-for-personal-number-notification-d1.pdf',
       },
       {
         nameAr: 'تعهد لوزارة المالية عند مباشرة العمل',
         nameEn: 'Ministry of Finance Undertaking',
-        fileName: 'undertaking-ministry-finance-commencement-work.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/undertaking-ministry-finance-commencement-work.pdf',
       },
       {
         nameAr: 'بيان معلومات من المستخدم الأجير الى رب العمل - ر4',
         nameEn: 'Employee Information Statement - R4',
-        fileName: 'information-statement-employee-worker-employer-r4.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/information-statement-employee-worker-employer-r4.pdf',
       },
       {
         nameAr: 'كتاب طلب تسجيل مستخدمين أجراء - ر3-1',
         nameEn: 'Employee Registration Request Letter - R3-1',
-        fileName: 'letter-requesting-registration-employees-workers-r3-1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/letter-requesting-registration-employees-workers-r3-1.pdf',
       },
       {
         nameAr: 'طلب براءة ذمة مالية - د7',
         nameEn: 'Financial Clearance Certificate - D7',
-        fileName: 'request-financial-clearance-certificate-d7.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/request-financial-clearance-certificate-d7.pdf',
       },
       {
         nameAr: 'طلب براءة ذمة عقارية - د8',
         nameEn: 'Real Estate Clearance Certificate - D8',
-        fileName: 'request-real-estate-clearance-certificate-d8.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/request-real-estate-clearance-certificate-d8.pdf',
       },
       {
         nameAr: 'بيان بصاحب الحق الاقتصادي - م18',
         nameEn: 'Beneficial Owner Statement - M18',
-        fileName: 'statement-beneficial-right-holder-m18.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/statement-beneficial-right-holder-m18.pdf',
       },
       {
         nameAr: 'تصريح تعديل معلومات شركات - م4',
         nameEn: 'Company Information Modification - M4',
-        fileName: 'declaration-modifying-company-information-m4.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/declaration-modifying-company-information-m4.pdf',
       },
       {
         nameAr: 'تصريح توقف عن العمل - م6',
         nameEn: 'Work Cessation Declaration - M6',
-        fileName: 'declaration-work-cessation-m6.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/declaration-work-cessation-m6.pdf',
       },
       {
         nameAr: 'طلب تسجيل مستخدم أجير جديد - ر3',
         nameEn: 'New Employee Registration - R3',
-        fileName: 'request-registration-new-employee-worker-r3.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/request-registration-new-employee-worker-r3.pdf',
       },
       {
         nameAr: 'مباشرة عمل شركات - م1',
         nameEn: 'Company Work Commencement - M1',
-        fileName: 'commencement-work-companies-m1.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/commencement-work-companies-m1.pdf',
       },
       {
         nameAr: 'تعريف شخصي - م11',
         nameEn: 'Personal Identification - M11',
-        fileName: 'personal-identification-m11.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/ministry-of-finance-forms/personal-identification-m11.pdf',
       },
     ],
   },
@@ -215,62 +231,74 @@ const formCategories = [
       {
         nameAr: 'اعلام عن استخدام او ترك اجير',
         nameEn: 'Notice of Employment or Termination',
-        fileName: 'notice-employment-termination-employee.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/notice-employment-termination-employee.pdf',
       },
       {
         nameAr: 'افادة عمل',
         nameEn: 'Work Certificate',
-        fileName: 'work-certificate.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/work-certificate.pdf',
       },
       {
         nameAr: 'التصريح الاسمي السنوي',
         nameEn: 'Annual Nominal Declaration',
-        fileName: 'annual-nominal-declaration.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/annual-nominal-declaration.pdf',
       },
       {
         nameAr: 'تصريح استخدام اجير',
         nameEn: 'Employee Employment Declaration',
-        fileName: 'employee-employment-declaration.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/employee-employment-declaration.pdf',
       },
       {
         nameAr: 'تصريح بعدم استخدام اجراء',
         nameEn: 'Declaration of Non-Employment',
-        fileName: 'declaration-non-employment-workers.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/declaration-non-employment-workers.pdf',
       },
       {
         nameAr: 'تصريح عن الزوجة',
         nameEn: 'Declaration about Spouse',
-        fileName: 'declaration-about-spouse.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/declaration-about-spouse.pdf',
       },
       {
         nameAr: 'جدول الاشتراكات عن التصريح الاسمي السنوي',
         nameEn: 'Annual Declaration Subscription Schedule',
-        fileName: 'subscription-schedule-annual-nominal-declaration.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/subscription-schedule-annual-nominal-declaration.pdf',
       },
       {
         nameAr: 'جدول الاشتراكات',
         nameEn: 'Subscription Schedule',
-        fileName: 'subscription-schedule.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/subscription-schedule.pdf',
       },
       {
         nameAr: 'طلب انتساب رب عمل الى الضمان',
         nameEn: 'Employer Registration Request',
-        fileName: 'request-employer-registration-social-security.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/request-employer-registration-social-security.pdf',
       },
       {
         nameAr: 'طلب براءة ذمة ضمان',
         nameEn: 'Social Security Clearance Request',
-        fileName: 'request-social-security-clearance-certificate.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/request-social-security-clearance-certificate.pdf',
       },
       {
         nameAr: 'طلب تسجيل اجير يعمل عند عدة ارباب عمل',
         nameEn: 'Multi-Employer Employee Registration',
-        fileName: 'request-registration-employee-multiple-employers.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/request-registration-employee-multiple-employers.pdf',
       },
       {
         nameAr: 'نقل استمرارية عمل اجير أو أجراء',
         nameEn: 'Employee Work Continuity Transfer',
-        fileName: 'transfer-work-continuity-employees.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-employers/transfer-work-continuity-employees.pdf',
       },
     ],
   },
@@ -297,28 +325,32 @@ const formCategories = [
       {
         nameAr: 'افادة لمن يهمه الأمر - إفادة عمل وراتب',
         nameEn: 'Work and Salary Certificate',
-        fileName: 'certificate-whom-concern-work-salary.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-secutiry-investigation/certificate-whom-concern-work-salary.pdf',
       },
       {
         nameAr: 'طلب اجراء تحقيق اجتماعي لاستفادة المضمون عن الوالد والوالدة',
         nameEn: 'Social Investigation for Parent Coverage',
-        fileName: 'request-social-investigation-beneficiary-father-mother.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-secutiry-investigation/request-social-investigation-beneficiary-father-mother.pdf',
       },
       {
         nameAr: 'طلب اجراء تحقيق اجتماعي لاستفادة المضمونة عن اولادها',
         nameEn: 'Social Investigation for Children Coverage',
         fileName:
-          'request-social-investigation-female-beneficiary-children.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-secutiry-investigation/request-social-investigation-female-beneficiary-children.pdf',
       },
       {
         nameAr: 'طلب اجراء تحقيق اجتماعي لاستفادة المضمونة عن زوجها',
         nameEn: 'Social Investigation for Spouse Coverage',
-        fileName: 'request-social-investigation-female-beneficiary-husband.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-secutiry-investigation/request-social-investigation-female-beneficiary-husband.pdf',
       },
       {
         nameAr: 'طلب تجديد تحقيق اجتماعي',
         nameEn: 'Social Investigation Renewal',
-        fileName: 'request-social-investigation-renewal.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-secutiry-investigation/request-social-investigation-renewal.pdf',
       },
     ],
   },
@@ -345,28 +377,32 @@ const formCategories = [
       {
         nameAr: 'افادة بالكسب او الاجر الاخير',
         nameEn: 'Last Earnings Certificate',
-        fileName: 'certificate-last-earnings-wages.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-end-of-service/certificate-last-earnings-wages.pdf',
       },
       {
         nameAr: 'المستندات الواجب تقديمها لتصفية تعويض نهاية الخدمة',
         nameEn: 'Required Documents for Settlement',
-        fileName: 'documents-required-end-service-compensation-settlement.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-end-of-service/documents-required-end-service-compensation-settlement.pdf',
       },
       {
         nameAr: 'تفويض لتسديد مبالغ مستحقة تعويض نهاية خدمة',
         nameEn: 'Payment Authorization',
         fileName:
-          'authorization-payment-due-amounts-end-service-compensation.pdf',
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-end-of-service/authorization-payment-due-amounts-end-service-compensation.pdf',
       },
       {
         nameAr: 'دعوة لتحديد الاجور والاشتراكات',
         nameEn: 'Wages and Contributions Notice',
-        fileName: 'notice-determine-wages-contributions.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-end-of-service/notice-determine-wages-contributions.pdf',
       },
       {
         nameAr: 'طلب تصفية تعويض نهاية خدمة',
         nameEn: 'Settlement Request',
-        fileName: 'request-end-service-compensation-settlement.pdf',
+        fileName:
+          'https://m8j2izfiyuradbbi.public.blob.vercel-storage.com/social-security-end-of-service/request-end-service-compensation-settlement.pdf',
       },
     ],
   },
