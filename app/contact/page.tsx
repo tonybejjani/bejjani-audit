@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 // Note: Since this is now a client component, metadata should be handled in layout.tsx or with next/head
 
@@ -21,6 +22,7 @@ interface FormStatus {
 }
 
 export default function ContactPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -88,20 +90,8 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({
-          type: 'success',
-          message:
-            'Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.',
-        });
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: '',
-        });
+        // Redirect to success page instead of showing inline message
+        router.push('/contact/success');
       } else {
         setStatus({
           type: 'error',
@@ -322,13 +312,11 @@ export default function ContactPage() {
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Status Message */}
-                {status.type !== 'idle' && (
+                {/* Status Message - Only show for loading and error states */}
+                {(status.type === 'loading' || status.type === 'error') && (
                   <div
                     className={`p-4 rounded-lg ${
-                      status.type === 'success'
-                        ? 'bg-green-50 text-green-700 border border-green-200'
-                        : status.type === 'error'
+                      status.type === 'error'
                         ? 'bg-red-50 text-red-700 border border-red-200'
                         : 'bg-blue-50 text-blue-700 border border-blue-200'
                     }`}
