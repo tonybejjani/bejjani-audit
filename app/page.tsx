@@ -16,7 +16,7 @@ export default function page() {
           className="object-cover object-top"
           alt="Audit Firm accountants meeting in the office"
         />
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary/70"></div>
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary-dark/60 "></div>
 
         {/* Subtle background elements */}
         <div className="absolute inset-0">
