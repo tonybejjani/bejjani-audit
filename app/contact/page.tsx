@@ -108,7 +108,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb Navigation */}
-      <div className="bg-white border-b border-gray-200 pt-24">
+      <div className="bg-white border-b border-gray-200 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex text-sm text-gray-600">
             <Link href="/" className="hover:text-primary transition-colors">

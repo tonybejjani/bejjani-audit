@@ -41,7 +41,7 @@ export default function MenuNav() {
               src="/logo.png"
               alt="Bejjani Audit"
               className={` w-auto hover:scale-105 transition-all duration-300
-                ${isScrolled ? 'h-18' : 'h-20'}`}
+                ${isScrolled ? 'h-16' : 'h-18'}`}
             />
           </Link>
 

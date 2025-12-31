@@ -29,7 +29,7 @@ export default function MenuMobile() {
             <img
               src="/logo.png"
               alt="Bejjani Audit"
-              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-14 w-auto hover:scale-105 transition-transform duration-300"
             />
           </Link>
           <button
@@ -76,9 +76,7 @@ export default function MenuMobile() {
             <div className="h-full backdrop-blur-3xl bg-gradient-to-br from-primary/95 via-primary-dark/90 to-blue-800/95 backdrop-saturate-150 shadow-2xl border-l border-white/20">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-white/20 backdrop-blur-sm bg-white/5">
-                <div className="text-xl font-bold text-white">
-                  Bejjani Audit
-                </div>
+                <div className="text-xl font-bold text-white"></div>
                 <button
                   onClick={toggleMenu}
                   className="p-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 hover:rotate-90 transition-all duration-300 text-white"
