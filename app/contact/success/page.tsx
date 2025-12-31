@@ -42,8 +42,7 @@ export default function ContactSuccessPage() {
             </h1>
             <div className="text-lg text-gray-600 space-y-2">
               <p>
-                Thank you for contacting <strong>Roy Bejjani Audit Firm</strong>
-                .
+                Thank you for contacting <strong>Bejjani Audit Firm</strong>.
               </p>
               <p>
                 Your message has been received and we&apos;ll get back to you

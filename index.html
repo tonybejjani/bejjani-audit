@@ -1,0 +1,575 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+           -->
+    <title>Bejjani Audit</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <a href="#" class="logo"
+          ><img src="./img/logo.png" alt="Logo" class="logo__img"
+        /></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#services" class="nav__link nav__link-services"
+                >Services</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-about">About us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contact us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-forms"
+                >Forms
+                <svg class="svg-icon-arrow">
+                  <use xlink:href="./img/sprite-svg-icons.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contact">
+          <ul class="nav__list">
+            <li class="nav__list-phone">
+              <svg class="svg-icon-phone">
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-phone"
+                ></use></svg
+              >76 751 480
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--active">Get a quote</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--              -->
+
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- <div class="cta">
+          <icon class="cta-icon">telephone</icon>
+          <span class="cta-text">Call us today</span
+          ><span class="cta-tel">76 751 480</span>
+        </div> -->
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__overlay">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__title">
+              Professional Accounting & Audit Services
+            </h1>
+            <p class="hero__subtitle">
+              Efficient accounting, tax, and audit solutions to grow your
+              business with confidence and compliance.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a href="#contact" class="hero__btn hero__btn--primary"
+              >Get Started</a
+            >
+            <a href="tel:76751480" class="hero__btn hero__btn--secondary">
+              <svg class="hero__btn-icon">
+                <use xlink:href="./img/sprite-svg-icons.svg#icon-phone"></use>
+              </svg>
+              76 751 480
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="services__container">
+        <div class="services__header">
+          <h2 class="services__title">Our Services</h2>
+          <p class="services__subtitle">
+            Professional accounting and audit solutions for your business
+          </p>
+        </div>
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-bar-chart"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Audit & Assurance</h3>
+            <p class="service-card__description">
+              Independent audit services ensuring compliance and financial
+              transparency. Our certified auditors provide thorough examinations
+              and stakeholder confidence in your financial reporting.
+            </p>
+            <a href="#" class="service-card__link" data-modal="audit"
+              >Learn More →</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-accounting"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Accounting Services</h3>
+            <p class="service-card__description">
+              Comprehensive bookkeeping and financial management solutions. From
+              daily transactions to financial statements, we maintain accurate
+              records and provide insights for informed business decisions.
+            </p>
+            <a href="#" class="service-card__link" data-modal="accounting"
+              >Learn More →</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use href="./img/sprite-svg-icons.svg#icon-tax"></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Tax Services</h3>
+            <p class="service-card__description">
+              Expert tax preparation and planning to optimize your financial
+              position. We handle corporate taxes, personal returns, and VAT
+              filings while ensuring full compliance with regulations.
+            </p>
+            <a href="#" class="service-card__link" data-modal="tax"
+              >Learn More →</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use xlink:href="./img/sprite-svg-icons.svg#icon-groups"></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Business Advisory</h3>
+            <p class="service-card__description">
+              Strategic financial guidance to help grow your business
+              sustainably. We analyze performance, assist with budget planning,
+              and provide insights for strategic decision-making.
+            </p>
+            <a href="#" class="service-card__link" data-modal="advisory"
+              >Learn More →</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-currency-exchange"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Payroll Management</h3>
+            <p class="service-card__description">
+              Efficient payroll processing and employee benefit administration.
+              We handle salary calculations, tax withholdings, and ensure
+              compliance with labor laws and regulations.
+            </p>
+            <a href="#" class="service-card__link" data-modal="payroll"
+              >Learn More →</a
+            >
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg>
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-reporting"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Financial Reporting</h3>
+            <p class="service-card__description">
+              Detailed financial analysis and reporting for informed business
+              decisions. We prepare comprehensive statements and reports that
+              provide clear insights into your company's performance.
+            </p>
+            <a href="#" class="service-card__link" data-modal="reporting"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="cta-section__container">
+        <div class="cta-section__content">
+          <div class="cta-section__badge">
+            <svg class="cta-section__badge-icon">
+              <use xlink:href="./img/sprite-svg-icons.svg#icon-bar-chart"></use>
+            </svg>
+            <span>Trusted by 500+ Businesses</span>
+          </div>
+          <h2 class="cta-section__title">
+            Ready to Transform Your Financial Management?
+          </h2>
+          <p class="cta-section__description">
+            Join hundreds of businesses that trust us with their accounting and
+            audit needs. Get a free consultation and discover how we can help
+            you achieve financial clarity and compliance.
+          </p>
+          <div class="cta-section__actions">
+            <a
+              href="#contact"
+              class="cta-section__btn cta-section__btn--primary"
+            >
+              Schedule Free Consultation
+              <svg class="cta-section__btn-icon">
+                <use xlink:href="./img/sprite-svg-icons.svg#icon-arrow"></use>
+              </svg>
+            </a>
+            <a
+              href="tel:76751480"
+              class="cta-section__btn cta-section__btn--secondary"
+            >
+              <svg class="cta-section__btn-icon">
+                <use xlink:href="./img/sprite-svg-icons.svg#icon-phone"></use>
+              </svg>
+              Call Us Now
+            </a>
+          </div>
+          <div class="cta-section__features">
+            <div class="cta-section__feature">
+              <svg class="cta-section__feature-icon">
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-bar-chart"
+                ></use>
+              </svg>
+              <span>Expert Team</span>
+            </div>
+            <div class="cta-section__feature">
+              <svg class="cta-section__feature-icon">
+                <use xlink:href="./img/sprite-svg-icons.svg#icon-groups"></use>
+              </svg>
+              <span>Fast Response</span>
+            </div>
+            <div class="cta-section__feature">
+              <svg class="cta-section__feature-icon">
+                <use
+                  xlink:href="./img/sprite-svg-icons.svg#icon-reporting"
+                ></use>
+              </svg>
+              <span>Proven Results</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h1 class="heading--1 about-box__heading--1-desk">
+        Why Clients Choose Us
+      </h1>
+      <h1 class="heading--1 about-box__heading--1-sm">About Us</h1>
+      <div class="about-box">
+        <div class="about-box__exp about-box__exp--accredited">
+          <div class="about-box__header about-box__header--accredited"></div>
+          <h3 class="heading--3">Accredited & Qualified</h3>
+          <p class="about-box__exp--desc">
+            Certified professionals with extensive qualifications and industry
+            recognition, ensuring the highest standards of service delivery and
+            compliance.
+          </p>
+        </div>
+        <div class="about-box__exp about-box__exp--delivered">
+          <div class="about-box__header about-box__header--delivered"></div>
+          <h3 class="heading--3 about-box__heading--3-desk">
+            Over 10,000 Audit Days Delivered
+          </h3>
+          <h3 class="heading--3 about-box__heading--3-sm">
+            10,000+ Audit Days
+          </h3>
+          <p class="about-box__exp--desc">
+            Proven track record with thousands of successful audit days
+            completed, demonstrating our expertise and commitment to excellence
+            in financial services.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact__container">
+        <div class="contact__header">
+          <h2 class="contact__title">Contact Us</h2>
+          <p class="contact__subtitle">
+            Ready to streamline your accounting and audit processes? Contact our
+            expert team today for a consultation.
+          </p>
+        </div>
+        <div class="contact__content">
+          <div class="contact__info">
+            <h2 class="heading--2 contact__heading">Get in Touch</h2>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <svg class="contact__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-phone"></use>
+                </svg>
+                <div class="contact__detail-content">
+                  <h4 class="contact__detail-title">Phone</h4>
+                  <p class="contact__detail-text">76 751 480</p>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <svg class="contact__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-email"></use>
+                </svg>
+                <div class="contact__detail-content">
+                  <h4 class="contact__detail-title">Email</h4>
+                  <p class="contact__detail-text">info@bejjaniaudit.com</p>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <svg class="contact__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-location"></use>
+                </svg>
+                <div class="contact__detail-content">
+                  <h4 class="contact__detail-title">Office</h4>
+                  <p class="contact__detail-text">Beirut, Lebanon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__form-container">
+            <form class="contact__form" id="contactForm">
+              <h3 class="heading--3 contact__form-title">Send us a Message</h3>
+
+              <div class="form__group">
+                <label for="name" class="form__label">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form__input"
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="email" class="form__label">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form__input"
+                  required
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="phone" class="form__label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form__input"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="company" class="form__label"
+                  >Company/Organization</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form__input"
+                  placeholder="Enter your company name"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="service" class="form__label"
+                  >Service of Interest</label
+                >
+                <select id="service" name="service" class="form__select">
+                  <option value="">Select a service</option>
+                  <option value="audit">Audit & Review</option>
+                  <option value="consultancy">Consultancy</option>
+                  <option value="payroll">Payroll</option>
+                  <option value="accounting">Accounting</option>
+                  <option value="tax">Tax Compliance</option>
+                  <option value="reporting">Reporting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label for="message" class="form__label">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form__textarea"
+                  required
+                  rows="5"
+                  placeholder="Tell us about your requirements..."
+                ></textarea>
+              </div>
+
+              <div class="form__group form__group--checkbox">
+                <label class="form__checkbox-label">
+                  <input type="checkbox" class="form__checkbox" required />
+                  <span class="form__checkmark"></span>
+                  I agree to the
+                  <a href="#" class="form__link">Privacy Policy</a> and consent
+                  to being contacted by Bejjani Audit.
+                </label>
+              </div>
+
+              <button type="submit" class="form__submit-btn">
+                <span class="btn__text">Send Message</span>
+                <svg class="btn__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <img
+                src="./img/logo.png"
+                alt="Bejjani Audit Logo"
+                class="footer__logo-img"
+              />
+              <div class="footer__logo-text">
+                <h3 class="footer__company-name">Bejjani Audit</h3>
+                <p class="footer__tagline">
+                  Professional Accounting & Audit Excellence
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__title">Services</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="#services" class="footer__link">Audit & Assurance</a>
+              </li>
+              <li>
+                <a href="#services" class="footer__link">Accounting Services</a>
+              </li>
+              <li><a href="#services" class="footer__link">Tax Services</a></li>
+              <li>
+                <a href="#services" class="footer__link">Business Advisory</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__title">Contact Info</h4>
+            <div class="footer__contact">
+              <p class="footer__contact-item">
+                <svg class="footer__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-phone"></use>
+                </svg>
+                76 751 480
+              </p>
+              <p class="footer__contact-item">
+                <svg class="footer__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-email"></use>
+                </svg>
+                info@bejjaniaudit.com
+              </p>
+              <p class="footer__contact-item">
+                <svg class="footer__icon">
+                  <use href="./img/sprite-svg-icons.svg#icon-location"></use>
+                </svg>
+                Beirut, Lebanon
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            <p>&copy; 2024 Bejjani Audit. All rights reserved.</p>
+          </div>
+          <div class="footer__legal">
+            <a href="#" class="footer__legal-link">Privacy Policy</a>
+            <span class="footer__separator">|</span>
+            <a href="#" class="footer__legal-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Service Modals -->
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal">
+        <button class="modal-close">&times;</button>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-icon">
+              <svg id="modal-icon-svg">
+                <!-- Icon will be dynamically updated -->
+              </svg>
+            </div>
+            <h2 class="modal-title">Service Title</h2>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description">Service description will go here.</p>
+            <div class="modal-features">
+              <h3>What We Offer:</h3>
+              <ul class="modal-features-list">
+                <!-- Features will be dynamically added -->
+              </ul>
+            </div>
+            <div class="modal-benefits">
+              <h3>Benefits:</h3>
+              <ul class="modal-benefits-list">
+                <!-- Benefits will be dynamically added -->
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#contact" class="modal-cta-btn">Get Started Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

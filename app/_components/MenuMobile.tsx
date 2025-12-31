@@ -22,29 +22,33 @@ export default function MenuMobile() {
 
   return (
     <div className="lg:hidden">
-      {/* Mobile Header with Glassmorphism */}
-      <div className="fixed top-0 left-0 right-0 z-40 bg-white shadow-lg border-b border-white/20">
-        <div className="px-4 py-5 flex items-center justify-between">
-          <Link href="/#" className="text-xl font-bold text-primary">
-            <img src="/logo.png" alt="Bejjani Audit" className="h-12 w-auto" />
+      {/* Mobile Header with Blue Glassmorphism */}
+      <div className="fixed top-0 left-0 right-0 z-40 backdrop-blur-xl bg-gradient-to-r from-primary/95 via-primary-dark/90 to-blue-800/95 backdrop-saturate-150 shadow-2xl border-b border-white/20">
+        <div className="px-6 py-4 flex items-center justify-between">
+          <Link href="/#" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Bejjani Audit"
+              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+            />
           </Link>
           <button
             onClick={toggleMenu}
-            className="flex flex-col gap-1.5 p-3 rounded-xl bg-primary/10 backdrop-blur-sm border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-300"
+            className="flex flex-col gap-1.5 p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300"
             aria-label="Toggle menu"
           >
             <div
-              className={`h-0.5 w-6 bg-primary rounded-full transition-all duration-300 ${
+              className={`h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${
                 openMenu ? 'rotate-45 translate-y-2' : ''
               }`}
             ></div>
             <div
-              className={`h-0.5 w-6 bg-primary rounded-full transition-all duration-300 ${
+              className={`h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${
                 openMenu ? 'opacity-0' : ''
               }`}
             ></div>
             <div
-              className={`h-0.5 w-6 bg-primary rounded-full transition-all duration-300 ${
+              className={`h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${
                 openMenu ? '-rotate-45 -translate-y-2' : ''
               }`}
             ></div>
