@@ -1,6 +1,45 @@
 /** @format */
 
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Services | Roy Bejjani Audit Firm',
+  description:
+    'Professional accounting and audit solutions tailored to your business needs. Explore our comprehensive range of services including audit, accounting, tax, advisory, payroll, and financial reporting.',
+  keywords: [
+    'accounting services',
+    'audit services',
+    'tax consulting',
+    'business advisory',
+    'payroll management',
+    'financial reporting',
+    'bookkeeping',
+    'financial audit',
+    'tax preparation',
+    'Lebanon accounting',
+  ],
+  openGraph: {
+    title: 'Our Services | Roy Bejjani Audit Firm',
+    description:
+      'Professional accounting and audit solutions tailored to your business needs. Explore our comprehensive range of services.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Services | Roy Bejjani Audit Firm',
+    description:
+      'Professional accounting and audit solutions tailored to your business needs.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/services',
+  },
+};
 
 export default function ServicesPage() {
   return (

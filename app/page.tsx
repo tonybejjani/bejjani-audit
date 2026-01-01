@@ -2,6 +2,61 @@
 
 import bg from '../public/bg.jpg';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Professional Accounting & Audit Services | Roy Bejjani Audit Firm',
+  description:
+    'Roy Bejjani Audit Firm provides expert accounting, tax, audit, and business advisory services in Lebanon. Licensed CPA with 20+ years experience. Get professional financial solutions for your business.',
+  keywords: [
+    'accounting services Lebanon',
+    'audit firm Lebanon',
+    'tax consulting',
+    'financial audit',
+    'Roy Bejjani',
+    'Bejjani Audit',
+    'CPA Lebanon',
+    'business accounting',
+    'financial compliance',
+    'bookkeeping services',
+    'tax preparation',
+    'financial advisory',
+    'certified auditor',
+    'payroll services',
+    'financial reporting',
+  ],
+  openGraph: {
+    title: 'Professional Accounting & Audit Services | Roy Bejjani Audit Firm',
+    description:
+      'Expert accounting, tax, audit, and business advisory services in Lebanon. Licensed CPA with 15+ years experience.',
+    url: 'https://bejjaniaudit.com',
+    siteName: 'Roy Bejjani Audit Firm',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Roy Bejjani Audit Firm - Professional Accounting Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professional Accounting & Audit Services | Roy Bejjani Audit Firm',
+    description:
+      'Expert accounting, tax, audit, and business advisory services in Lebanon. Licensed CPA with 15+ years experience.',
+    images: ['/twitter-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function page() {
   return (
