@@ -205,7 +205,7 @@ export default function page() {
                 standards? Let's discuss your audit needs.
               </p>
               <Link
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Request Audit Quote
@@ -577,7 +577,7 @@ export default function page() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300"
             >
               Request Audit Proposal
