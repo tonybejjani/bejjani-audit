@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Professional Accounting & Audit Services | Roy Bejjani Audit Firm',
     description:
-      'Expert accounting, tax, audit, and business advisory services in Lebanon. Licensed CPA with 15+ years experience.',
+      'Expert accounting, tax, audit, and business advisory services in Lebanon. Licensed CPA with 20+ years experience.',
     url: 'https://bejjaniaudit.com',
     siteName: 'Roy Bejjani Audit Firm',
     type: 'website',
