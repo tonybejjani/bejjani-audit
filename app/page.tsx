@@ -363,6 +363,153 @@ export default function page() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Content */}
+            <div>
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+                <span className="text-primary font-semibold text-sm">
+                  About Us
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Meet Roy Bejjani,
+                <span className="block text-primary">Your Trusted CPA</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                With over 20 years of experience in accounting and auditing, Roy
+                Bejjani founded this firm with a vision to provide exceptional
+                financial services to businesses across Lebanon.
+              </p>
+              <p className="text-base text-gray-600 mb-6 leading-relaxed">
+                As a Licensed Certified Public Accountant (CPA), Roy combines
+                technical expertise with a deep understanding of business needs,
+                helping clients navigate complex financial landscapes with
+                confidence.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">
+                    <span className="font-semibold">Licensed CPA</span> with
+                    extensive audit and accounting expertise
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">
+                    <span className="font-semibold">20+ years</span> of
+                    professional experience serving diverse industries
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">
+                    <span className="font-semibold">Commitment</span> to
+                    accuracy, integrity, and client success
+                  </p>
+                </div>
+              </div>
+              <a
+                href="/about"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
+              >
+                Learn More About Us
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {/* Stats/Features */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                  20+
+                </div>
+                <p className="text-gray-700 font-medium">Years of Experience</p>
+              </div>
+              <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                  100+
+                </div>
+                <p className="text-gray-700 font-medium">Satisfied Clients</p>
+              </div>
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                  6
+                </div>
+                <p className="text-gray-700 font-medium">
+                  Professional Services
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                  CPA
+                </div>
+                <p className="text-gray-700 font-medium">
+                  Licensed & Certified
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
