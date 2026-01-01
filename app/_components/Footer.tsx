@@ -13,12 +13,13 @@ export default function Footer() {
           {/* First Column - Company Info */}
           <div>
             <div className="mb-6">
-              <Link href="/" className="text-3xl font-bold text-white italic">
-                Bejjani Audit
+              <Link href="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="Bejjani Audit"
+                  className="h-18 w-auto hover:scale-105 transition-transform duration-300"
+                />
               </Link>
-              <p className="text-blue-300 text-sm italic font-medium  mt-2">
-                "Your Financial Future is Our Priority"
-              </p>
             </div>
 
             <p className="text-white/80 leading-relaxed text-lg">
