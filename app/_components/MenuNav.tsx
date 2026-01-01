@@ -39,8 +39,8 @@ export default function MenuNav() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md
           ${
             isScrolled
-              ? 'min-h-18 py-2 px-4 lg:px-8 xl:px-12 2xl:px-16 bg-gradient-to-r from-blue-900/90 to-blue-600/90 shadow-lg border-b border-white/10'
-              : 'min-h-20 py-4 px-4 lg:px-8 xl:px-12 2xl:px-16 bg-gradient-to-r from-blue-900 to-blue-600 shadow-md'
+              ? 'min-h-18 py-2 px-4 lg:px-8 xl:px-12 2xl:px-16 bg-gradient-to-r from-blue-950/80 via-blue-900/90 to-blue-800/90 shadow-lg border-b border-white/10'
+              : 'min-h-20 py-4 px-4 lg:px-8 xl:px-12 2xl:px-16 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 shadow-md'
           }
         `}
       >
