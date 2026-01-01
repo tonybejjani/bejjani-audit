@@ -9,7 +9,17 @@ import { useState, useEffect } from 'react';
 
 export default function MenuNav() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const pathname = usePathname();
+
+  const services = [
+    { href: '/services/audit', label: 'Audit & Assurance' },
+    { href: '/services/accounting', label: 'Accounting Services' },
+    { href: '/services/tax', label: 'Tax Services' },
+    { href: '/services/advisory', label: 'Business Advisory' },
+    { href: '/services/payroll', label: 'Payroll Services' },
+    { href: '/services/reporting', label: 'Financial Reporting' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,9 +60,78 @@ export default function MenuNav() {
           {/* Navigation */}
           <nav className="flex-1 flex justify-center">
             <ul className="flex gap-2 xl:gap-6 2xl:gap-12 text-white items-center m-0 p-0 list-none">
+              {/* Home Link */}
+              <li>
+                <Link
+                  href="/"
+                  className={`tracking-wide font-medium text-xs xl:text-base px-2 xl:px-3 2xl:px-4 py-1.5 xl:py-2 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white ${
+                    pathname === '/'
+                      ? 'bg-white text-blue-900 font-semibold shadow border border-white/30'
+                      : 'text-white/90'
+                  } flex items-center gap-1 whitespace-nowrap`}
+                >
+                  Home
+                </Link>
+              </li>
+
+              {/* Services Dropdown */}
+              <li
+                className="relative"
+                onMouseEnter={() => setShowServicesDropdown(true)}
+                onMouseLeave={() => setShowServicesDropdown(false)}
+              >
+                <Link
+                  href="/services"
+                  className={`tracking-wide font-medium text-xs xl:text-base px-2 xl:px-3 2xl:px-4 py-1.5 xl:py-2 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white ${
+                    pathname.startsWith('/services')
+                      ? 'bg-white text-blue-900 font-semibold shadow border border-white/30'
+                      : 'text-white/90'
+                  } flex items-center gap-1 whitespace-nowrap`}
+                >
+                  Services
+                  <svg
+                    className={`w-3 h-3 xl:w-4 xl:h-4 transition-transform duration-200 ${
+                      showServicesDropdown ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Link>
+
+                {/* Dropdown Menu */}
+                {showServicesDropdown && (
+                  <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                    <div className="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden animate-fade-in">
+                      <div className="py-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className={`block px-4 py-3 text-sm xl:text-base transition-all duration-200 ${
+                              pathname === service.href
+                                ? 'bg-blue-50 text-blue-900 font-semibold border-l-4 border-blue-600'
+                                : 'text-gray-700 hover:bg-blue-50 hover:text-blue-900 hover:border-l-4 hover:border-blue-400'
+                            }`}
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </li>
+
+              {/* Other Links */}
               {[
-                { href: '/', label: 'Home' },
-                { href: '/services', label: 'Services' },
                 { href: '/about', label: 'About us' },
                 { href: '/contact', label: 'Contact us' },
                 { href: '/forms', label: 'Forms', icon: true },
