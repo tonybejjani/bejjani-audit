@@ -483,12 +483,12 @@ export default function page() {
                 </div>
                 <p className="text-gray-700 font-medium">Years of Experience</p>
               </div>
-              <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
+              {/* <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
                   100+
                 </div>
                 <p className="text-gray-700 font-medium">Satisfied Clients</p>
-              </div>
+              </div> */}
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
                   6
