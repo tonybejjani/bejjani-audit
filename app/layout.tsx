@@ -113,7 +113,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema.org structured data for LocalBusiness
+  // Schema.org structured data for LocalBusiness and Organization
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Roy Bejjani Audit Firm',
+    alternateName: 'Bejjani Audit',
+    url: 'https://bejjaniaudit.com',
+    logo: 'https://bejjaniaudit.com/mono.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+961-76-751-480',
+      contactType: 'customer service',
+      email: 'info@bejjaniaudit.com',
+    },
+    sameAs: [
+      'https://www.facebook.com/bejjaniaudit',
+      'https://www.linkedin.com/company/bejjaniaudit',
+      'https://twitter.com/bejjaniaudit',
+    ],
+  };
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AccountingService',
@@ -121,8 +141,8 @@ export default function RootLayout({
     description:
       'Professional accounting, tax, audit, and business advisory services in Lebanon.',
     url: 'https://bejjaniaudit.com',
-    logo: 'https://bejjaniaudit.com/logo.jpg',
-    image: 'https://bejjaniaudit.com/logo.jpg',
+    logo: 'https://bejjaniaudit.com/mono.png',
+    image: 'https://bejjaniaudit.com/mono.png',
     telephone: '+961-76-751-480',
     email: 'info@bejjaniaudit.com',
     address: {
@@ -225,6 +245,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} `}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
