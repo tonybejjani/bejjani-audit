@@ -121,8 +121,8 @@ export default function RootLayout({
     description:
       'Professional accounting, tax, audit, and business advisory services in Lebanon.',
     url: 'https://bejjaniaudit.com',
-    logo: 'https://bejjaniaudit.com/mono.jpg',
-    image: 'https://bejjaniaudit.com/mono.jpg',
+    logo: 'https://bejjaniaudit.com/logo.jpg',
+    image: 'https://bejjaniaudit.com/logo.jpg',
     telephone: '+961-76-751-480',
     email: 'info@bejjaniaudit.com',
     address: {
