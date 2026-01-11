@@ -101,7 +101,7 @@ export default function page() {
               <h1 className="text-3xl sm:text-4xl lg:text-[52px] font-bold leading-[1.2] mb-6">
                 Professional
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-sky-200">
-                  Accounting & Audit
+                  Audit & Consultancy
                 </span>
                 Services
               </h1>
