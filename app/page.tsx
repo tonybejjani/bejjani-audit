@@ -503,7 +503,7 @@ export default function page() {
               </div>
               <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  Public Accountant
+                  Auditor
                 </div>
                 <p className="text-gray-700 font-medium">
                   Licensed & Certified
