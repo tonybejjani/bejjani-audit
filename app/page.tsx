@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'financial audit',
     'Roy Bejjani',
     'Bejjani Audit',
-    'CPA Lebanon',
+    'Public Accountant Lebanon',
     'business accounting',
     'financial compliance',
     'bookkeeping services',
@@ -376,7 +376,7 @@ export default function page() {
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Meet Roy Bejjani,
-                <span className="block text-primary">Your Trusted CPA</span>
+                <span className="block text-primary">Your Trusted Public Accountant in lebanon</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 With over 20 years of experience in accounting and auditing, Roy
@@ -408,7 +408,7 @@ export default function page() {
                   </div>
                   <p className="text-gray-700">
                     <span className="font-semibold">
-                      Licensed CPA in Lebanon
+                      Licensed Public Accountant in Lebanon
                     </span>{' '}
                     with extensive audit and accounting expertise
                   </p>
