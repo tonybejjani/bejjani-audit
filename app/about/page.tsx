@@ -257,7 +257,7 @@ export default function AboutPage() {
                 Founder & Managing Partner
               </p>
 
-              <div className="w-72  md:min-w-72 relative mb-6">
+              <div className="w-72  md:min-w-84 relative mb-6">
                 <Image
                   src={profilePicture}
                   placeholder="blur"
