@@ -562,7 +562,7 @@ export default function page() {
                   src={profilePicture}
                   placeholder="blur"
                   quality={90}
-                  className="object-cover object-top border-8 rounded-md shadow-inner border-gray-300   brightness-106 opacity-95 blur-[0.2px] p-2"
+                  className="object-cover object-top border-8 rounded-md shadow-inner border-gray-300    blur-[0.2px] p-2"
                   alt="Audit Firm accountants meeting in the office"
                 />
               </div>
