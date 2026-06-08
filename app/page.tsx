@@ -391,7 +391,7 @@ export default function page() {
                     src={profilePicture}
                     placeholder="blur"
                     quality={80}
-                    className="object-cover object-top border-8 rounded-lg border-gray-300 blur-[0.3px] brightness-110 opacity-90"
+                    className="object-cover object-top border-6 rounded-md border-gray-300 blur-[0.3px] brightness-110 opacity-90 p-2"
                     alt="Audit Firm accountants meeting in the office"
                   />
                 </div>
@@ -561,8 +561,8 @@ export default function page() {
                 <Image
                   src={profilePicture}
                   placeholder="blur"
-                  quality={80}
-                  className="object-cover object-top border-12 rounded-lg border-gray-300  blur-[0.2px] brightness-110 opacity-90"
+                  quality={90}
+                  className="object-cover object-top border-8 rounded-md shadow-inner border-gray-300   brightness-106 opacity-95 blur-[0.2px] p-2"
                   alt="Audit Firm accountants meeting in the office"
                 />
               </div>

@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { Metadata } from 'next';
+import profilePicture from '../../public/roy-bejjani.jpg';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us | Roy Bejjani Audit Firm',
@@ -243,17 +245,28 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 rounded-2xl p-8 text-center">
+          <div className="max-w-4xl mx-auto relative">
+            <div className="bg-gray-50 rounded-2xl p-8 text-center flex flex-col items-center">
               <div className="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-4xl font-bold text-white">RB</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Roy Bejjani
               </h3>
-              <p className="text-lg text-primary font-semibold mb-4">
+              <p className="text-lg text-primary font-semibold mb-6">
                 Founder & Managing Partner
               </p>
+
+              <div className="w-72  md:min-w-72 relative mb-6">
+                <Image
+                  src={profilePicture}
+                  placeholder="blur"
+                  quality={90}
+                  className="object-cover object-top border-6 shadow-inner rounded-lg border-gray-300   brightness-106 opacity-95 blur-[0.2px] p-2"
+                  alt="Audit Firm accountants meeting in the office"
+                />
+              </div>
+
               <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
                 With extensive experience in accounting, auditing, and business
                 advisory services, Roy leads the firm with a commitment to
