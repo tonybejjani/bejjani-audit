@@ -1,6 +1,7 @@
 /** @format */
 
 import bg from '../public/bg.jpg';
+import profilePicture from '../public/roy-bejjani.jpg';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
@@ -175,6 +176,7 @@ export default function page() {
         </div>
       </section>
 
+      {/* Services */}
       <section id="services" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
@@ -364,61 +366,179 @@ export default function page() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className=" py-16 sm:py-20 lg:py-24 bg-white relative">
+        <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="grid grid-cols-1 lg:grid-cols-8 min-[1312px]:grid-cols-3  gap-12 lg:gap-16 items-center">
             {/* Content */}
-            <div>
+            <div className="text-center lg:text-left lg:col-span-5 min-[1312px]:col-span-2">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
                 <span className="text-primary font-semibold text-sm">
                   About Us
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+
+              <h2 className="text-3xl sm:text-4xl lg:text-4xl min-[1312px]:text-5xl font-bold text-gray-900 mb-8">
                 Meet Roy Bejjani,
-                <span className="block text-primary">
+                <span className="block text-primary mt-2">
                   Your Trusted Public Accountant in lebanon
                 </span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 20 years of experience in accounting and auditing, Roy
-                Bejjani founded this firm with a vision to provide exceptional
-                financial services to businesses across Lebanon.
-              </p>
-              <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                As a Licensed Certified Public Auditor in Lebanon, Roy combines
-                technical expertise with a deep understanding of business needs,
-                helping clients navigate complex financial landscapes with
-                confidence.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
-                    <svg
-                      className="w-4 h-4 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-gray-700">
-                    <span className="font-semibold">
-                      Licensed Public Accountant in Lebanon
-                    </span>{' '}
-                    with extensive audit and accounting expertise
-                  </p>
+
+              {/* */}
+              <div className="flex flex-col items-center lg:flex-row lg:items-start md:gap-x-12 ">
+                <div className="w-72  md:min-w-72  mb-8 lg:hidden">
+                  <Image
+                    src={profilePicture}
+                    placeholder="blur"
+                    quality={80}
+                    className="object-cover object-top border-8 rounded-lg border-gray-300 blur-[0.3px] brightness-110 opacity-90"
+                    alt="Audit Firm accountants meeting in the office"
+                  />
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                <div className="">
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                    With over 20 years of experience in accounting and auditing,
+                    Roy Bejjani founded this firm with a vision to provide
+                    exceptional financial services to businesses across Lebanon.
+                  </p>
+                  <p className="text-base text-gray-600 mb-6 leading-relaxed">
+                    As a Licensed Certified Public Auditor in Lebanon, Roy
+                    combines technical expertise with a deep understanding of
+                    business needs, helping clients navigate complex financial
+                    landscapes with confidence.
+                  </p>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex justify-center  lg:justify-start items-start gap-2">
+                      <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                        <svg
+                          className="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">
+                        <span className="font-semibold">
+                          Licensed Public Accountant in Lebanon
+                        </span>{' '}
+                        with extensive audit and accounting expertise
+                      </p>
+                    </div>
+                    <div className="flex justify-center lg:justify-start items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+                        <svg
+                          className="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <p className="text-gray-700 ">
+                        <span className="font-semibold">20+ years</span> of
+                        professional experience serving diverse industries
+                      </p>
+                    </div>
+                    <div className="flex justify-center lg:justify-start items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-self-center-safe mt-1">
+                        <svg
+                          className="w-4 h-4 text-primary"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">
+                        <span className="font-semibold">Commitment</span> to
+                        accuracy, integrity, and client success
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Stats Laptops/Desktop */}
+                  <div className="hidden lg:flex lg:gap-x-8 mb-8">
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                      <div className="text-3xl lg:text-4xl min-[1312px]:text-5xl font-bold text-primary mb-2">
+                        20+
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Years of Experience
+                      </p>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                      <div className="text-3xl lg:text-4xl min-[1312px]:text-5xl font-bold text-primary mb-2">
+                        6
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Professional Services
+                      </p>
+                    </div>
+                    <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
+                      <div className="text-3xl lg:text-4xl min-[1312px]:text-5xl font-bold text-primary mb-2">
+                        Auditor
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Licensed & Certified
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Stats/Features Hand-Held Devices  */}
+                  <div className="flex flex-col col-y-4 gap-6 mb-8  min-[500px]:flex-row min-[500px]:flex-wrap min-[500px]:justify-center lg:hidden ">
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                      <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                        20+
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Years of Experience
+                      </p>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
+                      <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                        6
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Professional Services
+                      </p>
+                    </div>
+                    <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
+                      <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                        Auditor
+                      </div>
+                      <p className="text-gray-700 font-medium">
+                        Licensed & Certified
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="/about"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
+                  >
+                    Learn More About Us
                     <svg
-                      className="w-4 h-4 text-primary"
+                      className="w-4 h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -427,87 +547,24 @@ export default function page() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M5 13l4 4L19 7"
+                        d="M9 5l7 7-7 7"
                       />
                     </svg>
-                  </div>
-                  <p className="text-gray-700">
-                    <span className="font-semibold">20+ years</span> of
-                    professional experience serving diverse industries
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
-                    <svg
-                      className="w-4 h-4 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-gray-700">
-                    <span className="font-semibold">Commitment</span> to
-                    accuracy, integrity, and client success
-                  </p>
+                  </a>
                 </div>
               </div>
-              <a
-                href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
-              >
-                Learn More About Us
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
             </div>
 
-            {/* Stats/Features */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  20+
-                </div>
-                <p className="text-gray-700 font-medium">Years of Experience</p>
-              </div>
-              {/* <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  100+
-                </div>
-                <p className="text-gray-700 font-medium">Satisfied Clients</p>
-              </div> */}
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  6
-                </div>
-                <p className="text-gray-700 font-medium">
-                  Professional Services
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-6 text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  Auditor
-                </div>
-                <p className="text-gray-700 font-medium">
-                  Licensed & Certified
-                </p>
+            {/* Image Laptop/Desktop Devices viewport */}
+            <div className="hidden lg:block justify-self-end-safe ">
+              <div className="min-w-84 max-w-96">
+                <Image
+                  src={profilePicture}
+                  placeholder="blur"
+                  quality={80}
+                  className="object-cover object-top border-12 rounded-lg border-gray-300  blur-[0.2px] brightness-110 opacity-90"
+                  alt="Audit Firm accountants meeting in the office"
+                />
               </div>
             </div>
           </div>
