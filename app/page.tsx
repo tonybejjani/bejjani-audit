@@ -10,13 +10,16 @@ export const metadata: Metadata = {
   description:
     'Roy Bejjani Audit Firm provides expert accounting, tax, audit, and business advisory services in Lebanon. Licensed certified auditor in Lebanon. Get professional financial solutions for your business.',
   keywords: [
-    'accounting services Lebanon',
+    'accounting services in Lebanon',
+    'audit firms in Lebanon',
+    'audit firm in Lebanon',
+    'audit firms Lebanon',
     'audit firm Lebanon',
     'tax consulting',
     'financial audit',
     'Roy Bejjani',
     'Bejjani Audit',
-    'Public Accountant Lebanon',
+    'Public Accountant in Lebanon',
     'business accounting',
     'financial compliance',
     'bookkeeping services',
